@@ -1,0 +1,40 @@
+.banner__middle {
+  position: relative;
+  height: 65vh;
+  display: block;
+  margin-bottom: 2rem;
+
+  @include respond(tab-land) {
+    margin-bottom: 0rem;
+    height: 32vh;
+  }
+
+  @include respond(tab-port) {
+    height: 30vh !important;
+  }
+
+  @include respond(phone) {
+    height: 22vh !important;
+    margin: 0 0 3rem 0;
+  }
+  @include respond(big-desktop) {
+    background-position: top !important;
+    // height: 55vh;
+  }
+
+  &-img {
+    width: 100%;
+    background-position: top !important;
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

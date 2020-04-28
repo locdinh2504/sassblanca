@@ -1,0 +1,61 @@
+.navigation__form {
+  position: relative;
+}
+
+.navigation__group {
+  font-weight: 900;
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-transform: uppercase;
+  line-height: 1rem;
+  width: fit-content;
+  // width: -moz-fit-content !important;
+  width: -moz-max-content;
+  margin-top: 4rem;
+
+  @include respond(tab-port) {
+    font-size: 1rem;
+    display: none;
+  }
+  @include respond(tab-land) {
+    font-size: 1.2rem;
+    padding: 8rem 0 0 0;
+    display: none;
+  }
+  @include respond(big-desktop) {
+    font-size: 1.5rem;
+    padding: 10rem 0 10rem 0;
+  }
+
+  @include respond(phone) {
+    font-size: 0.8rem;
+  }
+}
+
+.navigation__list {
+  display: inline-block;
+  list-style: none;
+  margin: 1rem;
+}
+
+.navigation__link:link,
+.navigation__link:visited {
+  text-decoration: none;
+  color: $color-black;
+  transition: all 0.2s;
+  padding: 10px 20px;
+
+  &:hover {
+    border-bottom: 3px solid $color-black;
+  }
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
+  @include respond(phone) {
+    padding: 0;
+  }
+}

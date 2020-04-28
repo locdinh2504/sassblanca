@@ -1,0 +1,145 @@
+.item__main {
+  display: inline-block;
+
+  @include respond(tab-land) {
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+
+  &-change {
+    width: 100%;
+    position: relative;
+
+    // @include respond(tab-land) {
+    //   width: 100%;
+    //   position: relative;
+    //   overflow: hidden;
+    // }
+    // @include respond(big-desktop) {
+    //   width: 100%;
+    //   position: relative;
+    //   left: 100px;
+    // }
+  }
+
+  &-size {
+    opacity: 0;
+    color: $color-black;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    font-weight: 600;
+    text-transform: uppercase;
+    // position: absolute;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    left: 0;
+    transition: all 0.5s;
+
+    @include respond(tab-port) {
+      font-size: 1.2rem;
+      padding-left: 1rem;
+      left: 15rem !important;
+    }
+
+    @include respond(big-desktop) {
+      left: 0;
+      font-size: 0.8rem;
+    }
+    @include respond(phone) {
+      font-size: 0.8rem;
+
+      text-align: center;
+      left: 2rem !important;
+    }
+  }
+
+  &-img {
+    width: 100%;
+    margin-bottom: 2rem;
+    transition: all 0.5s;
+
+    @include respond(phone) {
+      width: 30% !important;
+    }
+    @include respond(big-desktop) {
+      width: 50%;
+    }
+  }
+
+  &-img:hover ~ &-size {
+    opacity: 1;
+  }
+
+  &-detail {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    text-align: center;
+    margin-bottom: 10px;
+
+    @include respond(tab-port) {
+      font-size: 0.8rem;
+    }
+    @include respond(tab-land) {
+      font-size: 1rem;
+    }
+    @include respond(phone) {
+      font-size: 0.7rem;
+    }
+    // @include respond(big-desktop) {
+    //   width: 100%;
+    //   position: relative;
+    //   left: 100px;
+    // }
+  }
+
+  &-price {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: $color-black;
+
+    @include respond(tab-port) {
+      font-size: 0.8rem;
+      padding-bottom: 1rem;
+    }
+    // @include respond(big-desktop) {
+    //   width: 100%;
+    //   position: relative;
+    //   left: 100px;
+    // }
+  }
+
+  &-line {
+    text-decoration: line-through;
+  }
+
+  &-runway {
+    outline: none;
+    text-align: center;
+    margin: 10px;
+    // @include respond(big-desktop) {
+    //   width: 100%;
+    //   position: relative;
+    //   left: 90px;
+    // }
+
+    &-1 {
+      background-image: linear-gradient(90deg, #ffba00 0%, #ff6c00 100%);
+
+      margin: 0 0 5px;
+      padding: 0.2em 1em;
+      color: $color-white;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      line-height: 1.5;
+      display: inline-block;
+
+      @include respond(tab-port) {
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

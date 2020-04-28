@@ -1,0 +1,44 @@
+.subscribe {
+  @include respond(tab-port) {
+    text-align: center;
+  }
+
+  &__youtube:link,
+  &__youtube:visited {
+    text-align: center;
+    text-transform: uppercase;
+    list-style: none;
+    text-decoration: none;
+    overflow: hidden;
+
+    &:hover {
+      color: none;
+    }
+  }
+
+  &__text-1 {
+    z-index: 10;
+    color: $color-black;
+    font-size: 3rem;
+    font-weight: 900;
+    text-align: center;
+    text-transform: uppercase;
+    transform: skewX(7deg);
+    line-height: 2.5;
+  }
+
+  &__text-2 {
+    z-index: 10;
+    color: $color-black;
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1.5;
+    margin-bottom: 5rem;
+
+    @include respond(tab-port) {
+      margin-bottom: 2rem;
+    }
+  }
+}

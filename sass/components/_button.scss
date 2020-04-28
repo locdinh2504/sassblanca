@@ -1,0 +1,136 @@
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 900;
+
+    padding: 15px 40px;
+    position: relative;
+    display: inline-block;
+    text-transform: uppercase;
+    transition: all 0.5s;
+    border: none;
+    cursor: pointer;
+
+    @include respond(tab-port) {
+      font-size: 1rem;
+      margin: 0 auto;
+      padding: 15px 40px;
+    }
+    @include respond(tab-land) {
+      font-size: 1rem;
+    }
+
+    @include respond(phone) {
+      font-size: 0.7rem;
+      padding: 5px 5px;
+      margin: 5px;
+    }
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba($color-black, 0.5);
+  }
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba($color-black, 0.2);
+  }
+
+  &--white {
+    color: $color-white;
+    background-color: $color-primary;
+  }
+
+  &::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transition: all 0.5s;
+    display: inline-block;
+  }
+
+  &--white::after {
+    background-color: $color-primary;
+  }
+  &:hover::after {
+    transform: scaleX(1.5) scaleY(1.5);
+    opacity: 0;
+  }
+
+  &--size {
+    padding: 10px 20px !important;
+    margin: 1rem;
+  }
+
+  &--purple {
+    color: $color-white;
+    background-color: $color-primary;
+  }
+
+  &--purple::after {
+    background-color: $color-primary;
+  }
+}
+
+.btn-text:link,
+.btn-text:visited {
+  color: $color-primary;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 1px solid $color-primary;
+  padding: 3px;
+  transition: all 0.5s;
+
+  @include respond(tab-land) {
+    padding-left: 2rem;
+    margin-left: 2rem;
+  }
+
+  &:hover {
+    background-color: $color-primary;
+    color: $color-white;
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.5);
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    box-shadow: 0 0.5rem 1rem rgba($color-black, 0.5);
+    transform: translateY(0);
+  }
+}
+
+// button click me
+
+.btn1 {
+  border: 1px solid;
+  background: none;
+  padding: 1rem 2rem;
+  font-size: 3rem;
+  font-family: sans-serif;
+  cursor: pointer;
+  margin: 1.5rem;
+
+  @include respond(tab-port) {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+  }
+
+  &-sub {
+    color: #3498db;
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+}

@@ -1,0 +1,145 @@
+.section-main {
+  background-color: $color-white;
+}
+
+.section-banner {
+  display: block;
+  overflow: hidden;
+  margin-top: 15rem;
+
+  @include respond(phone) {
+    margin-top: 9rem !important;
+  }
+  @include respond(tab-port) {
+    margin-top: 12rem !important;
+  }
+}
+
+.section-header {
+  padding: 10px 5px;
+  display: block;
+}
+
+.section__image {
+  margin: 10rem 0 10rem 0;
+  z-index: -1;
+}
+
+.section__image-1 {
+  width: 100%;
+  height: 60vh;
+}
+
+.section-footer {
+  padding: 5px 15px;
+  background-image: url(image/contact-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: auto;
+  position: relative;
+  margin-bottom: 1rem;
+  @include respond(tab-port) {
+    padding: 1rem 0;
+  }
+
+  @include respond(phone) {
+    padding: 1rem;
+  }
+}
+
+.section-item {
+  margin-bottom: 5rem;
+  text-align: center;
+  display: block;
+
+  // @include respond(phone) {
+  //   text-align: center;
+  //   display: block !important;
+  // }
+
+  @include respond(tab-land) {
+    display: block;
+  }
+}
+
+.section-buynow {
+  padding: 8rem;
+  margin: 15rem 0 15rem 0;
+  background-image: linear-gradient(to left, $color-white 10%, $color-black);
+
+  transform: skewY(-7deg);
+  & > * {
+    transform: skewY(7deg);
+  }
+  @include respond(phone) {
+    margin: 5rem 0 0 0;
+  }
+}
+
+.section-video {
+  background-color: $color-white;
+  padding: 30px;
+  margin: 5rem 0 5rem 0;
+
+  @include respond(phone) {
+    margin: 2rem 0 4rem 0;
+  }
+}
+
+.section-sale {
+  background-image: linear-gradient(to left, $color-white, $color-black 90%);
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.section-about {
+  padding: 6rem 0 18rem 0;
+  background-color: $color-white;
+  margin-top: 5rem;
+  background-image: url(image/parallax1.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  @include respond(tab-port) {
+    padding: 5rem 0;
+  }
+
+  @include respond(tab-land) {
+    padding: 2rem 0 4rem 0;
+  }
+}
+
+.section-title {
+  height: 200vh;
+
+  background: $color-black;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #f00, #0f0, #00f, #f0f, #0ff, #ff0);
+    pointer-events: none;
+    mix-blend-mode: color;
+  }
+
+  @include respond(tab-port) {
+    max-width: 50rem;
+    height: 100vh;
+  }
+  @include respond(phone) {
+    max-width: 20rem;
+    height: 100vh;
+  }
+  @include respond(tab-land) {
+    max-width: 100rem;
+    height: 200vh;
+  }
+}

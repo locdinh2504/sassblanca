@@ -1,0 +1,62 @@
+.buynow__left {
+  float: left;
+  display: block;
+  width: 100%;
+
+  &-img {
+    width: 90%;
+  }
+}
+
+.buynow__right {
+  display: block;
+  float: right;
+
+  @include respond(tab-port) {
+    float: left;
+    margin: 2rem;
+  }
+
+  &-h2 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+
+    @include respond(tab-port) {
+      font-size: 2.5rem;
+    }
+  }
+
+  &-h3 {
+    font-size: 2.4rem;
+    text-transform: uppercase;
+
+    margin-bottom: 2rem;
+    color: rgb(230, 16, 165);
+  }
+
+  &-p {
+    font-size: 2rem;
+    padding: 2rem 0;
+
+    @include respond(tab-port) {
+      float: left;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.video__left {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  overflow: hidden;
+
+  &-content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+}

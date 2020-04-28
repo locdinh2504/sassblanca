@@ -1,0 +1,137 @@
+.footer__left {
+  h2 {
+    font-size: 5rem;
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+
+    @include respond(tab-port) {
+      font-size: 2rem;
+      margin: 0;
+      display: inline-block;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    color: $color-white;
+    transition: all 0.5s;
+
+    @include respond(tab-port) {
+      font-size: 1.2rem;
+    }
+
+    &:hover {
+      color: $color-white;
+    }
+  }
+}
+
+.footer__right {
+  &-a a {
+    font-size: 1.5rem;
+    display: inline-block;
+    padding: 1rem;
+    text-decoration: none;
+    list-style: none;
+    color: $color-white;
+    margin-bottom: 1.5rem;
+    margin-top: 5rem;
+    transition: all 0.5s;
+    @include respond(tab-land) {
+      font-size: 1.2rem;
+    }
+
+    @include respond(tab-port) {
+      font-size: 1rem;
+      margin-top: 1rem;
+      padding: 0.5rem;
+      float: left;
+    }
+
+    &:hover {
+      color: #fff;
+    }
+  }
+  &-icon {
+    @include respond(phone) {
+      display: inline-block;
+    }
+  }
+
+  &-group li {
+    text-decoration: none;
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.5rem;
+
+    @include respond(tab-port) {
+      padding: 0;
+      margin-top: 2rem;
+    }
+  }
+
+  &-group a {
+    font-size: 2.5rem;
+    padding: 1rem;
+
+    @include respond(tab-port) {
+      font-size: 1rem;
+    }
+
+    color: $color-black;
+
+    &:hover {
+      color: blue;
+    }
+  }
+}
+
+.callback {
+  color: black;
+  font-size: 50px;
+  position: fixed;
+  bottom: 25px;
+  right: 110px;
+  z-index: 111;
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+////////////////////////////////
+
+#button {
+  display: inline-block;
+  background-color: #ff9800;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 1;
+  // visibility: hidden;
+  z-index: 1000;
+}
+#button::after {
+  content: "\f077";
+  font-family: FontAwesome;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 50px;
+  color: #fff;
+}
+#button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+#button:active {
+  background-color: #555;
+}
+#button.show {
+  opacity: 1;
+  visibility: visible;
+}
